@@ -1,0 +1,316 @@
+GET http://localhost:4000/jobs
+
+ ###
+
+ POST http://localhost:4000/jobs
+Content-Type: application/json
+
+{
+  "company": "Amazon",
+  "title": "Software Engineer",
+  "status": "Applied",
+  "applicationDate": "24/04/2026",
+  "notes": "Need to prepare portfolio"
+}
+
+###
+
+ POST http://localhost:4000/jobs
+Content-Type: application/json
+
+{
+  "company": "Amazon",
+  "title": "Software Engineer",
+  "status": "Applied",
+  "applicationDate": "24/04/2026",
+  "notes": "Need to prepare portfolio"
+}
+
+###
+
+POST http://localhost:4000/jobs Content-Type: application/json { "company": "Google", "title": "AI Engineer", "status": "Offer", "applicationDate": "", "notes": "Need to prepare CV" }
+
+###
+
+POST http://localhost:4000/jobs
+Content-Type: application/json
+
+{
+  "company": "Google",
+  "title": "AI Engineer",
+  "status": "Offer",
+  "applicationDate": "",
+  "notes": "Need to prepare CV"
+}
+
+###
+
+POST http://localhost:4000/jobs
+Content-Type: application/json
+
+{
+  "company": "Apple",
+  "title": "Dev Engineer",
+  "status": "Interviewing",
+  "applicationDate": "16/06/2026",
+  "notes": "Prepare questions"
+}
+
+###
+
+GET http://localhost:4000/jobs
+
+###
+
+GET http://localhost:4000/jobs?status=Applied
+
+
+
+###
+
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "secret123"
+}
+
+###POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "secret123"
+}
+
+###
+
+Right, here's the exact block, both requests properly separated with ###, and precisely formatted with the required blank lines:
+
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "secret123"
+}
+
+###
+
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "secret123"
+}
+
+###
+
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "secret123"
+}
+###
+
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "secret123"
+}
+
+###
+
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "wrongpassword"
+}
+###
+
+GET http://localhost:4000/jobs
+
+###
+
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "secret123"
+}
+
+###
+
+GET http://localhost:4000/jobs
+Authorization: Bearer PASTE_TOKEN_HERE
+###
+
+GET http://localhost:4000/jobs
+
+###
+
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "secret123"
+}
+
+###
+
+GET http://localhost:4000/jobs
+Authorization: Bearer PASTE_TOKEN_HERE
+
+###
+
+GET http://localhost:4000/jobs
+Authorization: Bearer PASTE_TOKEN_HERE
+
+###
+
+GET http://localhost:4000/jobs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNzg3ODMwODM3LCJleHAiOjE3ODc4MzQ0Mzd9.jRLZXwycqvbNQYB0h4dm3APlXLoh4yKPKeH4Vr_PNSY
+###
+
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+  "email": "userA@test.com",
+  "password": "secret123"
+}
+
+###
+
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+  "email": "userA@test.com",
+  "password": "secret123"
+}
+
+###
+
+POST http://localhost:4000/jobs
+Content-Type: application/json
+Authorization: Bearer TOKEN_A_HERE
+
+{
+  "company": "Amazon",
+  "title": "Backend Dev",
+  "status": "Applied",
+  "applicationDate": "01/01/2026",
+  "notes": "User A's job"
+}
+
+###
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+  "email": "userB@test.com",
+  "password": "secret123"
+}
+
+###
+
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+  "email": "userB@test.com",
+  "password": "secret123"
+}
+
+###
+GET http://localhost:4000/jobs
+Authorization: Bearer TOKEN_B_HERE
+###
+
+POST http://localhost:4000/jobs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1c2VyQUB0ZXN0LmNvbSIsImlhdCI6MTc4NzgzNDUzNiwiZXhwIjoxNzg3ODM4MTM2fQ.zhHlY79knLPgI4akpiKerXEl9rDKC58qHLMEb1xI55U
+
+{
+  "company": "Amazon",
+  "title": "Backend Dev",
+  "status": "Applied",
+  "applicationDate": "01/01/2026",
+  "notes": "User A's job"
+}
+
+###
+
+GET http://localhost:4000/jobs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ1c2VyQkB0ZXN0LmNvbSIsImlhdCI6MTc4NzgzNDcwNiwiZXhwIjoxNzg3ODM4MzA2fQ.WNBM5BFCjT1rPTTrQhAe7W242VXZ4w84XVgBu2ULrMw
+###
+
+POST http://localhost:4000/jobs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1c2VyQUB0ZXN0LmNvbSIsImlhdCI6MTc4NzgzNDUzNiwiZXhwIjoxNzg3ODM4MTM2fQ.zhHlY79knLPgI4akpiKerXEl9rDKC58qHLMEb1xI55U
+
+{
+  "notes": "missing everything else"
+}
+###
+
+POST http://localhost:4000/jobs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ1c2VyQkB0ZXN0LmNvbSIsImlhdCI6MTc4NzgzNDcwNiwiZXhwIjoxNzg3ODM4MzA2fQ.WNBM5BFCjT1rPTTrQhAe7W242VXZ4w84XVgBu2ULrMw
+{
+  "notes": "missing everything else"
+}
+###
+
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+  "email": "userA@test.com",
+  "password": "secret123"
+}
+###
+
+POST http://localhost:4000/jobs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1c2VyQUB0ZXN0LmNvbSIsImlhdCI6MTc4Nzg0NDEzOCwiZXhwIjoxNzg3ODQ3NzM4fQ.IFIrIN8xbDA2W6gFWHIXUiPniaum-t8cvRzkSzK5mcg
+
+{
+  "notes": "missing everything else"
+}
+###
+
+POST http://localhost:4000/jobs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1c2VyQUB0ZXN0LmNvbSIsImlhdCI6MTc4Nzg0NDEzOCwiZXhwIjoxNzg3ODQ3NzM4fQ.IFIrIN8xbDA2W6gFWHIXUiPniaum-t8cvRzkSzK5mcg
+
+{
+  "notes": "missing everything else"
+}
+
+###
+
+POST http://localhost:4000/jobs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1c2VyQUB0ZXN0LmNvbSIsImlhdCI6MTc4Nzg0NDEzOCwiZXhwIjoxNzg3ODQ3NzM4fQ.IFIrIN8xbDA2W6gFWHIXUiPniaum-t8cvRzkSzK5mcg
+
+{
+  "company": "Meta",
+  "title": "Frontend Engineer",
+  "status": "Applied",
+  "applicationDate": "10/03/2026",
+  "notes": "Complete valid job"
+}
+
+###
