@@ -10,6 +10,7 @@ function Jobs({token, setToken}) {
     const [applicationDate, setApplicationDate] = useState('');
     const [notes, setNotes] = useState('');
     const [edit, setEdit] = useState(false);
+    const [statusFilter, setStatusFilter] = useState('All');
 
     const fetchJob = () => {
         fetch('http://localhost:4000/jobs', {
@@ -96,6 +97,10 @@ function Jobs({token, setToken}) {
         .catch(err => setErrorMessage(err.message));
     };
 
+    const filteredJobs = statusFilter === 'All'
+    ? jobs
+    : jobs.filter(job => job.status === statusFilter);
+
     const handleDelete = (id) => {
         fetch(`http://localhost:4000/jobs/${id}`, {
             method: 'DELETE',
@@ -138,6 +143,13 @@ function Jobs({token, setToken}) {
                 <button onClick={fetchJob}>Load jobs</button>
                 <button onClick={handleLogout}>Log out</button>
             </div>
+            <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
+                <option value='All'>All</option>
+                <option value='Applied'>Applied</option>
+                <option value='Interviewing'>Interviewing</option>
+                <option value='Rejected'>Rejected</option>
+                <option value='Offer'>Offer</option>
+            </select>
         </div>
 
         <div className="content-row">
@@ -145,9 +157,15 @@ function Jobs({token, setToken}) {
                 <form onSubmit={handleSubmit} className="form-group">
                     <input type='text' placeholder='Company' value={company} onChange={(e) => setCompany(e.target.value)} />
                     <input type='text' placeholder='Title' value={title} onChange={(e) => setTitle(e.target.value)} />
-                    <input type='text' placeholder='Status' value={status} onChange={(e) => setStatus(e.target.value)} />
                     <input type='text' placeholder='Application date' value={applicationDate} onChange={(e) => setApplicationDate(e.target.value)} />
                     <input type='text' placeholder='Notes' value={notes} onChange={(e) => setNotes(e.target.value)} />
+                    <select value={status} onChange={(e) => setStatus(e.target.value)}>
+                        <option value='' disabled>Select status</option>
+                        <option value='Applied'>Applied</option>
+                        <option value='Interviewing'>Interviewing</option>
+                        <option value='Rejected'>Rejected</option>
+                        <option value='Offer'>Offer</option>
+                    </select>
                     <button>
                         {edit ? 'Save changes' : 'Create job'}
                     </button>
@@ -156,7 +174,7 @@ function Jobs({token, setToken}) {
             </div>
 
             <div className="job-list">
-                {jobs.map(job => (
+                {filteredJobs.map(job => (
                     <div className="job-item" key={job.id}>
                         <div className="job-info">
                             <span className="job-title">{job.title}</span>
