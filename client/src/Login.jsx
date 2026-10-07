@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Login({setToken, setShowSignup}) {
 
@@ -11,7 +12,7 @@ function Login({setToken, setShowSignup}) {
     const handleLogin = (e) => {
         e.preventDefault();
 
-        fetch('http://localhost:4000/auth/login', {
+        fetch(`${API_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })

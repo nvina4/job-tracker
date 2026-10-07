@@ -1,4 +1,5 @@
 import { useState } from "react";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Jobs({token, setToken}) {
 
@@ -13,7 +14,7 @@ function Jobs({token, setToken}) {
     const [statusFilter, setStatusFilter] = useState('All');
 
     const fetchJob = () => {
-        fetch('http://localhost:4000/jobs', {
+        fetch(`${API_URL}/jobs`, {
             headers: {Authorization: `Bearer ${token}`}
         })
         .then(res => res.json().then(data => {
@@ -32,7 +33,7 @@ function Jobs({token, setToken}) {
     };
 
     const handleCreateJob = () => {
-        fetch('http://localhost:4000/jobs', {
+        fetch(`${API_URL}/jobs`, {
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json',
@@ -65,7 +66,7 @@ function Jobs({token, setToken}) {
     };
 
     const handleUpdate = (id) => {
-        fetch(`http://localhost:4000/jobs/${id}`, {
+        fetch(`${API_URL}/jobs/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type' : 'application/json',
@@ -102,7 +103,7 @@ function Jobs({token, setToken}) {
     : jobs.filter(job => job.status === statusFilter);
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:4000/jobs/${id}`, {
+        fetch(`${API_URL}/jobs/${id}`, {
             method: 'DELETE',
             headers: {Authorization: `Bearer ${token}`}
         })
