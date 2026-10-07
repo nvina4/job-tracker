@@ -11,7 +11,7 @@ function Signup({setShowSignup}) {
     const handleSignup = (e) => {
         e.preventDefault();
 
-        fetch('http://localhost:4000/auth/register', {
+        fetch(`${API_URL}/auth/register`, {
             method: 'POST',
             headers: { 'Content-Type' : 'application/json'},
             body: JSON.stringify({email, password})
