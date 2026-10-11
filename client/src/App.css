@@ -43,6 +43,10 @@ body {
     padding: 56px 24px;
 }
 
+label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
 
 .page-header {
     width: 100%;

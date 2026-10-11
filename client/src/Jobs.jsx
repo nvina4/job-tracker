@@ -158,7 +158,8 @@ function Jobs({token, setToken}) {
                 <form onSubmit={handleSubmit} className="form-group">
                     <input type='text' placeholder='Company' value={company} onChange={(e) => setCompany(e.target.value)} />
                     <input type='text' placeholder='Title' value={title} onChange={(e) => setTitle(e.target.value)} />
-                    <input type='text' placeholder='Application date' value={applicationDate} onChange={(e) => setApplicationDate(e.target.value)} />
+                    <label>Application date</label>
+                    <input type='date' value={applicationDate} onChange={(e) => setApplicationDate(e.target.value)} />
                     <input type='text' placeholder='Notes' value={notes} onChange={(e) => setNotes(e.target.value)} />
                     <select value={status} onChange={(e) => setStatus(e.target.value)}>
                         <option value='' disabled>Select status</option>
